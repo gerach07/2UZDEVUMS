@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adrians Bergmanis | Portfolio</title>
+  <meta name="description" content="Adrians Bergmanis - RTK students portfolio with programming projects and contact info.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Adrians Bergmanis</div>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="#about">Par mani</a>
+      <a href="#projects">Projekti</a>
+      <a href="#contact">Kontakti</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="textii">
+        <h1>Prieks, ka apciemo manu mājaslapu</h1>
+        <p>RTK P2-2 audēknis</p>
+      </div>
+      <div class="kkas">
+        <a href="#projects" class="cta-button">Skatīt darbus</a>
+        <img src="logo.png" alt="RTK logo" loading="lazy" width="140" height="140">
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>Par mani</h2>
+      <p>Es mācos Rīgas Tehniskajā koledžā par programmētāju 2. kursā. Man patīk programmēt. Es nākotnē varētu būt programmētājs.</p>
+    </section>
+
+    <section id="projects" class="section projects">
+      <h2>Projekti</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3><a href="https://gerach07.github.io/1UZDEVUMS/" target="_blank" rel="noopener">Mērvienību pārveidotājs</a></h3>
+          <p>Pirmais projekts tiek uzskatīts kā pirmais uzdevums 2025. jūnija prakses 1. uzdevums</p>
+        </div>
+        <div class="project-card not-available" id="card">
+          <h3>Kāršu spēles</h3>
+          <img src="pic199513.jpg" alt="Kāršu spēle" width="120" height="63" loading="lazy" style="max-width:100%; height:auto;">
+          <div class="popup">Pagaidām nav pieejams</div>
+        </div>
+        <div class="project-card not-available">
+          <h3>Īrija</h3>
+          <p>Ceļojums uz Īriju apkopots šajā mājaslapā</p>
+          <div class="popup">Pagaidām nav pieejams</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Kontakti</h2>
+      <form id="contact-form">
+        <label>
+          <input type="text" placeholder="Tavs vārds" name="name" required aria-label="Tavs vārds" />
+        </label>
+        <label>
+          <input type="email" placeholder="Tavs e-pasts" name="email" required aria-label="Tavs e-pasts" />
+        </label>
+        <label>
+          <textarea placeholder="Tava vēstule..." name="message" required aria-label="Tava vēstule"></textarea>
+        </label>
+        <button type="submit">Sūtīt vēstuli</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Adrians Bergmanis. Visas tiesības aizsargātas.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

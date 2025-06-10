@@ -1,0 +1,245 @@
+:root {
+  --bg: #fdfdfd;
+  --text: #222;
+  --accent: #0077ff;
+  --card: #ffffff;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --card: #1e1e1e;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+a {
+  color: rgb(197, 181, 181);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block; /* Required for transform to animate properly */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+  transform: translateY(-3px);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text);
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, var(--accent), #00c6ff);
+  color: white;
+}
+.hero .kkas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hero .textii {
+  display: block;
+  text-align: center;
+}
+
+.cta-button {
+  background: white;
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+ .project-card h3, .project-card.not-available h3{
+  white-space: nowrap;   /* Prevent text from wrapping */
+  overflow: visible;     /* Allow container to grow */
+  display: inline-block; /* Allows the div to grow with content */
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  width: 100%;
+  background: var(--card);
+  color: var(--text);
+}
+
+button[type="submit"] {
+  background: white;
+  color: rgb(0, 0, 0);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+p {
+  margin-bottom: 20px;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    background: var(--card);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    display: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+.project-card {
+  position: relative;
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Popup styling */
+.project-card .popup {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4d4f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show popup on hover only for 'not-available' cards */
+.project-card.not-available:hover .popup {
+  display: block;
+}
+.project-card.not-available {
+  cursor: not-allowed;
+}
+#card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.project-card.not-available img{
+  height: 70px;
+}
+.hero img, .hero .kkas {
+  height: 140px;
+  margin-left: 100px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem; /* or whatever size you want */
+}
+
+h2 {
+  font-size: 1.5rem;
+}
