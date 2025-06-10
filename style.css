@@ -79,20 +79,33 @@ a:hover {
 }
 .hero {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to new line */
   justify-content: center;
+  align-items: center;
   padding: 5rem 2rem;
   background: linear-gradient(to right, var(--accent), #00c6ff);
   color: white;
 }
+
 .hero .kkas {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-grow: 1; /* Allow this div to grow to fill space */
 }
+
 .hero .textii {
-  display: block;
   text-align: center;
+  flex-grow: 1; /* Allow this div to grow to fill space */
 }
+
+.hero img {
+  height: auto;
+  width: 100%; /* Ensure the image scales with its container */
+  max-width: 140px; /* Limit maximum width to maintain design */
+  margin-left: 0; /* Reset margin for better centering */
+}
+
 
 .cta-button {
   background: white;
@@ -122,6 +135,9 @@ a:hover {
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.project-card a:hover{
+  color: white;
 }
 
 form {
@@ -226,14 +242,11 @@ footer {
 .project-card.not-available img{
   height: 70px;
 }
-.hero img, .hero .kkas {
-  height: 140px;
-  margin-left: 100px;
-}
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: bold;
   line-height: 1.2;
+  margin: 10px;
 }
 
 h1 {
